@@ -1,0 +1,49 @@
+<section id="our-customer">
+	<div class="wrap">
+		<h3>We serve Enterprises across the industries.</h3>
+		<div class="slide-wrap" data-slide=''>
+			<div class="slide">
+				<div class="images-size">
+					<img src="{{clients.ais.image}}">
+				</div>
+				<div class="slide-pack">
+					<div class="slide-item" data-ng-repeat="client in clients" data-ng-class="{active: $first}" data-slide-item=''>
+						<div class="image">
+							<img src="{{client.image}}">
+						</div>
+						<div class="svg">
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px" height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+								<g>
+									<polygon fill="{{client.color}}" points="446.781,0.004 1000,0.004 1000,1000.004 446.781,1000.004 	"/>
+									<polygon fill="{{client.color}}" points="47.324,999.996 448.912,-0.004 448.912,999.996 	"/>
+								</g>
+							</svg>
+						</div>
+						<div class="content">
+							<div class="logo" style="background-image: url({{client.logo}});">
+							</div>
+							<div class="text">
+								<h4>{{client.text.title}}</h4>
+								<p>{{client.text.detail1}}</p>
+								<p>{{client.text.detail2}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pag">
+				<div class="pag-wrap">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="get-start">
+	<div class="wrap">
+		<h3>Ready to Get Started?</h3>
+		<div class="btn">
+			<button class="black-border">Download PDF</button>
+			<button class="red">Request for Demo</button>
+		</div>
+	</div>
+</section>

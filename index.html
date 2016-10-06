@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Conicle</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<link rel="icon" href="public/images/conicle.ico" type="image/x-icon">
+		<link rel='stylesheet' type='text/css' href='public/css/main.css'>
+		<script type='text/javascript' src='public/libs/angular/angular.min.js'></script>
+		<script type='text/javascript' src='public/libs/angular-ui-router/release/angular-ui-router.min.js'></script>
+		<script type='text/javascript' src='public/libs/jquery/dist/jquery.min.js'></script>
+		<script type='text/javascript' src='public/libs/gsap/src/minified/TweenMax.min.js'></script>
+		<!-- Module -->
+		<script type='text/javascript' src='public/modules/core/core.client.module.js'></script>
+		<script type='text/javascript' src='public/modules/page/page.client.module.js'></script>
+		<!-- Directive -->
+		<script type='text/javascript' src='public/modules/core/directive/pageScroll.client.directive.js'></script>
+		<script type='text/javascript' src='public/modules/core/directive/sticky.client.directive.js'></script>
+		<script type='text/javascript' src='public/modules/core/directive/slide.client.directive.js'></script>
+		<script type='text/javascript' src='public/modules/core/directive/slideItem.client.directive.js'></script>
+		<!-- Route -->
+		<script type='text/javascript' src='public/modules/core/config/core.client.route.js'></script>
+		<script type='text/javascript' src='public/modules/page/config/page.client.route.js'></script>
+		<!-- Controller -->
+		<script type='text/javascript' src='public/modules/page/controller/index.client.controller.js'></script>
+		<script type='text/javascript' src='public/modules/page/controller/solution.client.controller.js'></script>
+		<script type='text/javascript' src='public/modules/page/controller/product.client.controller.js'></script>
+		<script type='text/javascript' src='public/modules/page/controller/customer.client.controller.js'></script>
+		<script type='text/javascript' src='public/modules/page/controller/contact.client.controller.js'></script>
+		<!-- Application -->
+		<script type='text/javascript' src='public/application.js'></script>
+	</head>
+	<body id="main">
+		<div id="page-home" data-ui-view=""></div>
+		<div id="page-solution" data-ui-view="solution"></div>
+		<div id="page-products" data-ui-view="product"></div>
+		<div id="page-customer" data-ui-view="our-customer"></div>
+		<div id="page-contact-us" data-ui-view="contact-us"></div>
+		<div id="foot">
+			<div class="wrap">
+				<div class="left">
+					<div class="logo"></div>
+					<span>Technology enabled. Everything's possible.</span>
+				</div>
+				<div class="right">
+					<span>Copyright 2016 Conicle Co.,Ltd.</span>
+				</div>
+			</div>
+		</div>
+		<div id="nav" data-sticky-nav=''>
+			<div class="logo">
+				<div class="image"></div>
+				<span>Empower Smart Enterprise</span>
+			</div>
+			<div class="menu" data-page-scroll="">
+				<ul>
+					<li><a href="#page-home">Home</a></li>
+					<li><a href="#page-solution">Solutions</a></li>
+					<li><a href="#page-products">Products</a></li>
+					<li><a href="#page-customer">Our Customers</a></li>
+					<li><a href="#page-contact-us">Contact us</a></li>
+					<li><a class="button" href="">Donwload PDF</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

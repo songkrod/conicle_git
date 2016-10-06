@@ -1,0 +1,24 @@
+{
+  "name": "landingPage",
+  "authors": [
+    "Songkrod Thanavorn <songkrod.th@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/songkrod/tmp_conicle",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "public/libs"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "jquery": "*",
+    "gsap": "^1.19.0"
+  }
+}
