@@ -18,7 +18,7 @@ angular.module('page').controller('CustomerController', [
 				"image": "public/images/customer.jpg",
 				"text": {
 					"title": "Workshop On-the-Go",
-					"detail1": "Applying Conicle ONDEMAND and LIVE to broadcast company’s workshop to business partners around the country via web and mobile device anywhere anytime.",
+					"detail1": "Applying Conicle ONDEMAND and LIVE to broadcast company's workshop to business partners around the country via web and mobile device anywhere anytime.",
 					"detail2": "Unilever is one of the world's largest consumer goods company. Its products include food, beverages, cleaning agents and personal care products and more."
 				}
 			},
@@ -38,8 +38,8 @@ angular.module('page').controller('CustomerController', [
 				"image": "public/images/customer.jpg",
 				"text": {
 					"title": "Tutors on your hand",
-					"detail1": "Using Conicle ONDEMAND to be ClickforClever’s online course marketplace integrated with payment system to sell and provide online courses directly to their customers.",
-					"detail2": "ClickforClever.com is one of the most popular online tutoring website among high school students in Thailand providing variety of courses with the concept “Online Edutainment”."
+					"detail1": "Using Conicle ONDEMAND to be ClickforClever's online course marketplace integrated with payment system to sell and provide online courses directly to their customers.",
+					"detail2": 'ClickforClever.com is one of the most popular online tutoring website among high school students in Thailand providing variety of courses with the concept "Online Edutainment".'
 				}
 			}
 		}
