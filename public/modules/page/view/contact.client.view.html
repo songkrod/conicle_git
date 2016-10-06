@@ -13,11 +13,13 @@
 			</div>
 			<div class="box">
 				<h4>Request for Demo and Quotation</h4>
-				<input type="text" placeholder="Your name">
-				<input type="text" placeholder="Company name">
-				<input type="text" placeholder="Email">
-				<textarea placeholder="Message"></textarea>
-				<button class="red">Submit</button>
+				<form data-ng-submit="sendContact()">
+				<input type="text" placeholder="Your name" data-ng-model="form.name">
+				<input type="text" placeholder="Company name" data-ng-model="form.company">
+				<input type="text" placeholder="Email" data-ng-model="form.email">
+				<textarea placeholder="Message" data-ng-model="form.msg"></textarea>
+				<button class="red" type="submit" data-ng-click="Submit">Submit</button>
+				</form>
 			</div>
 		</div>
 	</div>
