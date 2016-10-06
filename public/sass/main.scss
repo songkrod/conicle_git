@@ -194,7 +194,7 @@ section {
 }
 
 #overview {
-	height: 100%;
+	min-height: 100%;
 	padding: 100px 0px;
 	background: url(../images/first.jpg) center center no-repeat;
 	background-size: cover;
@@ -208,42 +208,42 @@ section {
 		height: 280px;
 		margin: auto;
 		position: absolute;
+	}
 
-		h1, h3 {
-			width: 100%;
-			display: block;
-			text-align: center;
-		}
+	h1, h2 {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
 
-		h5 {
-			width: 100%;
-			display: block;
-			text-align: center;
-		}
+	h5 {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
 
-		p {
-			width: 100%;
-			display: block;
-			margin: 0 auto;
-			font-size: 15px;
-			max-width: 500px;
-			text-align: center;
-			text-align-last: center;
-			font-family: $font-highlight;
+	p {
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+		font-size: 15px;
+		max-width: 500px;
+		text-align: center;
+		text-align-last: center;
+		font-family: $font-highlight;
 
-			@include box-sizing;
-		}
+		@include box-sizing;
+	}
 
-		.btn {
-			width: 100%;
-			padding: 20px 0;
-			position: relative;
-			text-align: center;
-			@include box-sizing;
+	.btn {
+		width: 100%;
+		padding: 20px 0;
+		position: relative;
+		text-align: center;
+		@include box-sizing;
 
-			button {
-				margin: 0 10px;
-			}
+		button {
+			margin: 0 10px;
 		}
 	}
 }
@@ -511,7 +511,7 @@ section {
 
 			.text {
 				width: 100%;
-				min-height: 100px;
+				height: 120px;
 				font-size: 20px;
 				padding: 20px;
 				display: inline-block;
@@ -546,7 +546,7 @@ section {
 
 	.wrap {
 		max-width: 100%;
-		padding: 100px 20px 50px;
+		padding: 100px 20px 250px;
 		margin: 0 auto;
 		position: relative;
 		display: inline-block;
@@ -601,7 +601,7 @@ section {
 		}
 
 		h4 {
-			margin-top: 30px;
+			margin-top: 50px;
 		}
 
 		p {
@@ -613,21 +613,27 @@ section {
 		.feature-list {
 			width: 100%;
 			position: relative;
+			overflow: hidden;
+			padding: 10px 0;
 
 			ul {
-				width: 100%;
-				padding: 0px;
+				float: left;
+				width: 50%;
+				padding: 0px 20px 0px 0px;
 				margin: 0px;
 				list-style: none;
 				position: relative;
 				display: inline-block;
 				overflow: hidden;
+				@include box-sizing;
 
 				li {
 					float: left;
-					width: 35%;
-					height: 25px;
+					width: 100%;
+					min-height: 25px;
 					font-size: 16px;
+					line-height: 20px;
+					padding-bottom: 10px;
 					font-family: $font-highlight;
 					padding-left: 30px;
 					position: relative;
@@ -664,8 +670,9 @@ section {
 
 			p {
 				font-size: 14px;
-				min-height: 60px;
+				min-height: 80px;
 				text-align: center;
+				margin-bottom: 10px;
 				text-align-last: center;
 			}
 
@@ -697,6 +704,10 @@ section {
 }
 
 #product-connect {
+	.wrap {
+		padding: 100px 20px 200px;
+	}
+
 	.phone, .content {
 		float: right !important;
 	}
@@ -1119,9 +1130,33 @@ section {
 	}
 }
 
+@media only screen and (max-width: 1100px) {
+	#solution-detail {
+		.box-wrap {
+			.box {
+				.text {
+					height: 148;
+				}
+			}
+		}
+	}
+
+	#product-ondemand, #product-connect {
+		.foot {
+			.box {
+				padding: 20px;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 1000px) {
 	#product-ondemand, #product-connect {
 		padding-bottom: 200px;
+
+		.wrap {
+			padding-bottom: 140px;
+		}
 
 		.foot {
 			.box {
@@ -1219,7 +1254,24 @@ section {
 }
 
 @media only screen and (max-width: 900px) {
-	
+	#product-ondemand, #product-connect {
+
+		.wrap {
+			padding-bottom: 100px;
+		}
+
+		.content {
+			.feature-list {
+				ul {
+
+					li {
+					    font-size: 14px;
+						line-height: 18px;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: 850px) {
@@ -1228,6 +1280,20 @@ section {
 			.box {
 				h6 {
 					height: 50px;
+				}
+			}
+		}
+	}
+
+	#product-ondemand, #product-connect {
+		.foot {
+			.box {
+				span {
+					height: 50px;
+				}
+
+				p {
+					height: 100px;
 				}
 			}
 		}
@@ -1268,6 +1334,29 @@ section {
 }
 
 @media only screen and (max-width: 800px) {
+	#overview {
+		h1 {
+			font-size: 40px;
+		}
+
+		h2 {
+			font-size: 35px;
+		}
+	}
+
+	#solution-detail {
+		.box-wrap {
+			.box {
+				.text {
+
+					p {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
 	#product-ondemand, #product-connect {
 		padding-bottom: 0px;
 
@@ -1281,6 +1370,10 @@ section {
 			.slide-item {
 				.content {
 					.text {
+						h5 {
+							font-size: 17px;
+							line-height: 22px;
+						}
 						p {
 							font-size: 12px;
 							line-height: 16px;
@@ -1289,6 +1382,40 @@ section {
 					}
 				}
 			}
+		}
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	#solution-detail {
+		.box-wrap {
+			.box {
+				width: 50%;
+
+				.text {
+					height: 100px;
+				}
+			}
+		}
+	}
+
+	#product-ondemand, #product-connect {
+		.wrap {
+			padding-bottom: 350px;
+		}
+
+		.phone {
+			float: none;
+			left: 0px;
+			right: 0px;
+			bottom: -25%;
+			width: 40%;
+			margin: auto;
+			position: absolute;
+		}
+
+		.content {
+			width: 100%;
 		}
 	}
 }
@@ -1328,26 +1455,15 @@ section {
 
 	#product-ondemand, #product-connect {
 		.wrap {
-			padding-bottom: 200px;
+			padding-bottom: 300px;
 		}
 
-		.phone {
-			float: none;
-			width: 100%;
-			left: 0px;
-			bottom: -30%;
-			position: absolute;
-			text-align: right;
-
-			img {
-				width: 40%;
+		.foot {
+			.box {
+				h4 {
+					font-size: 20px;
+				}
 			}
-		}
-
-		.content {
-			float: left !important;
-			width: 100%;
-			padding: 0px;
 		}
 	}
 
@@ -1397,16 +1513,52 @@ section {
 	}
 }
 
+@media only screen and (max-width: 630px) {
+	#product-ondemand, #product-connect {
+		.phone {
+			bottom: -20%;
+		}
+	}
+}
+
 @media only screen and (max-width: 600px) {
+	#overview {
+		.wrap {
+			height: 300px;
+		}
+
+		h1 {
+			font-size: 35px;
+			line-height: 40px;
+		}
+
+		h2 {
+			font-size: 28px;
+			line-height: 35px;
+		}
+	}
+
 	#solution-detail {
 		.box-wrap {
 			.box {
 				width: 50%;
+
+				.text {
+					height: 130px;
+				}
 			}
 		}
 	}
 
 	#product-ondemand, #product-connect {
+		.wrap {
+			padding-bottom: 250px;
+		}
+
+		.content {
+			padding: 0px 30px;
+		}
+
 		.foot {
 			.box {
 				width: 100%;
@@ -1417,6 +1569,7 @@ section {
 					width: 80%;
 					display: block;
 					max-width: 350px;
+					height: auto;
 					min-height: auto;
 					text-align: center;
 					text-align-last: center;
@@ -1528,15 +1681,102 @@ section {
 			}
 		}
 	}
+
+	#product-ondemand, #product-connect {
+		.wrap {
+			padding-bottom: 300px;
+		}
+
+		.phone {
+			bottom: -10%;
+		}
+
+		.content {
+			.feature-list {
+				ul {
+					width: 100%;
+					padding: 0px 20px;
+				}
+			}
+		}
+	}
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 430px) {
 	#solution-detail {
 		.box-wrap {
 			.box {
 				float: none;
-				width: 80%;
+				width: 100%;
 				margin: 0 auto;
+
+				.text {
+					height: auto;
+				}
+			}
+		}
+	}
+
+	#product-ondemand, #product-connect {
+		.wrap {
+			padding-bottom: 250px;
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	#overview {
+		.wrap {
+			height: auto;
+			position: relative;
+		}
+
+		h1 {
+			font-size: 30px;
+			line-height: 35px;
+		}
+
+		h2 {
+			font-size: 23px;
+			line-height: 30px;
+		}
+
+		h5 {
+			font-size: 18px;
+			line-height: 22px;
+		}
+
+		p {
+			font-size: 13px;
+			line-height: 18px;
+		}
+
+		.btn {
+			padding: 20px;
+
+			button {
+				margin: 10px 0;
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+
+	#product-ondemand, #product-connect {
+		.wrap {
+			padding-bottom: 220px;
+		}
+
+		.content {
+			padding: 0px 15px;
+
+			.title-wrap {
+				.title {
+					h1 {
+						font-size: 40px;
+						line-height: 50px;
+					}
+				}
 			}
 		}
 	}
