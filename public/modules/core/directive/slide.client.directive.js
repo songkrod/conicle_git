@@ -31,7 +31,8 @@ angular.module('core').directive('slide', function() {
 					slideItem.css({"z-index": 3, "opacity": 1});
 
 					TweenMax.to(slideItem.find(".image"), .5, {"left":"0%", opacity: 1});
-					TweenMax.to(slideItem.find(".svg"), .5, {opacity: 1, onComplete: function () {
+					TweenMax.to([slideItem.find(".svg"), slideItem.find(".caption")], .5, {opacity: 1, onComplete: function () {
+						TweenMax.to(slideItem.find(".caption p"), .5, {opacity: 1});
 						TweenMax.to(slideItem.find(".content"), .5, {"right":"0%", opacity: 1, onComplete: function () {
 							clearStyle(oldElement);
 							slideItem.addClass("active").css("z-index", 2);
@@ -44,6 +45,8 @@ angular.module('core').directive('slide', function() {
 					slideItem.find(".image").attr("style", "");
 					slideItem.find(".svg").attr("style", "");
 					slideItem.find(".content").attr("style", "");
+					slideItem.find(".caption").attr("style", "");
+					slideItem.find(".caption p").attr("style", "");
 				}
 
 				function setPag(index) {

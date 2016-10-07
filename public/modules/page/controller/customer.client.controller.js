@@ -3,7 +3,11 @@ angular.module('page').controller('CustomerController', [
 	function ($scope) {
 		$scope.clients = {
 			"ais" : {
-				"color": "#78c400",
+				"name": "ais",
+				"color": {
+					"hex": "#78c400",
+					"rgb": "120,196,0"
+				},
 				"logo": "public/images/logo-cus-ais.png",
 				"image": "public/images/cus-ais.jpg",
 				"text": {
@@ -13,7 +17,11 @@ angular.module('page').controller('CustomerController', [
 				}
 			},
 			"unilever" : {
-				"color": "#17375e",
+				"name": "unilever",
+				"color": {
+					"hex": "#17375e",
+					"rgb": "23,55,94"
+				},
 				"logo": "public/images/logo-cus-unilever.png",
 				"image": "public/images/cus-unilever.jpg",
 				"text": {
@@ -23,7 +31,11 @@ angular.module('page').controller('CustomerController', [
 				}
 			},
 			"pacrim" : {
-				"color": "#d90202",
+				"name": "pacrim",
+				"color": {
+					"hex": "#d90202",
+					"rgb": "217,2,2"
+				},
 				"logo": "public/images/logo-cus-pacrim.png",
 				"image": "public/images/cus-pacrim.jpg",
 				"text": {
@@ -33,7 +45,11 @@ angular.module('page').controller('CustomerController', [
 				}
 			},
 			"click4clever" : {
-				"color": "#00d2a7",
+				"name": "click_for_clever",
+				"color": {
+					"hex": "#00d2a7",
+					"rgb": "0,210,167"
+				},
 				"logo": "public/images/logo-cus-click4clever.png",
 				"image": "public/images/cus-click4clever.jpg",
 				"text": {

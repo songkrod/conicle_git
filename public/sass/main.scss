@@ -951,7 +951,7 @@ section {
 			.svg {
 				top: 0px;
 				right: 0px;
-				width: 50%;
+				width: 100%;
 				height: 100%;
 				opacity: 0;
 				position: absolute;
@@ -960,12 +960,20 @@ section {
 					width: 100%;
 					height: 100%;
 				}
+
+				.ver {
+					display: block;
+				}
+
+				.hor {
+					display: none;
+				}
 			}
 
 			.content {
 				top: 0px;
 				right: -10%;
-				width: 40%;
+				width: 100%;
 				height: 100%;
 				padding: 50px;
 				position: absolute;
@@ -974,28 +982,47 @@ section {
 				opacity: 0;
 
 				.logo {
-					width: 70%;
-					height: 30%;
+					left: 40px;
+					top: 20px;
+					width: 150px;
+					height: 15%;
     				display: inline-block;
-					position: relative;
+					position: absolute;
 					text-align: right;
-					background: center center no-repeat;
+					background: left top no-repeat;
 					background-size: contain;
 				}
 
-				p {
-					font-size: 14px;
-					font-family: $font-highlight;
-					text-align: right;
-					text-align-last: right;
+				.text {
+					float: right;
+					width: 35%;
+					position: relative;
+
+					p {
+						float: right;
+						width: 80%;
+						font-size: 14px;
+						font-family: $font-highlight;
+						text-align: left;
+						text-align-last: left;
+						text-indent: 30px;
+					}
 				}
 			}
 
+			.caption {
+				left: 0px;
+				bottom: 0px;
+				widows: 100%;
+				padding: 10px;
+				position: absolute;
+				@include box-sizing;
+				opacity: 0;
+			}
+
 			&:nth-child(4) {
-				.content {
-					.logo {
-						height: 25%;
-					}
+				.logo {
+					height: 20%;
 				}
 			}
 
@@ -1244,20 +1271,6 @@ section {
 			}
 		}
 	}
-
-	#our-customer {
-		.slide {
-			.slide-item {
-				.content {
-					padding: 20px 50px;
-
-					.logo {
-						height: 20%;
-					}
-				}
-			}
-		}
-	}
 }
 
 @media only screen and (max-width: 940px) {
@@ -1306,12 +1319,6 @@ section {
 			.slide-item {
 				.content {
 					padding: 20px;
-
-					.text {
-						h4 {
-							font-size: 20px;
-						}
-					}
 				}
 			}
 		}
@@ -1381,15 +1388,16 @@ section {
 		.slide {
 			.slide-item {
 				.content {
-					.logo {
-						height: 50px;
+					h4 {
+						font-size: 20px;
+						line-height: 25px;
 					}
 
 					.text {
-						padding-left: 20px;
-
-						h4 {
-							line-height: 25px;
+						p {
+							font-size: 12px;
+							line-height: 18px;
+							margin-bottom: 10px;
 						}
 					}
 				}
@@ -1413,7 +1421,6 @@ section {
 		.box-wrap {
 			.box {
 				.text {
-
 					p {
 						font-size: 14px;
 					}
@@ -1427,26 +1434,6 @@ section {
 
 		.foot {
 			position: relative;
-		}
-	}
-
-	#our-customer {
-		.slide {
-			.slide-item {
-				.content {
-					.text {
-						h5 {
-							font-size: 17px;
-							line-height: 22px;
-						}
-						p {
-							font-size: 12px;
-							line-height: 16px;
-							margin-bottom: 15px;
-						}
-					}
-				}
-			}
 		}
 	}
 }
@@ -1481,6 +1468,60 @@ section {
 
 		.content {
 			width: 100%;
+		}
+	}
+
+	#our-customer {
+		.wrap {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
+		h3 {
+			padding: 0 20px;
+		}
+
+		.slide {
+			.images-size {
+				img {
+					width: 100%;
+				}
+			}
+			.slide-item {
+				.svg {
+					.ver {
+						display: none;
+					}
+
+					.hor {
+						display: block;
+					}
+				}
+
+				.content {
+					h4 {
+						font-size: 17px;
+						line-height: 20px;
+						margin: 0px;
+					}
+
+					.text {
+						left: 0px;
+						bottom: 0px;
+						width: 100%;
+						padding: 10px 20px;
+						position: absolute;
+						@include box-sizing;
+
+						p {
+							width: 100%;
+							margin-top: 10px;
+							margin-bottom: 0px;
+							line-height: 16px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -1527,39 +1568,6 @@ section {
 			.box {
 				h4 {
 					font-size: 20px;
-				}
-			}
-		}
-	}
-
-	#our-customer {
-		.wrap {
-			padding-left: 0px;
-			padding-right: 0px;
-		}
-
-		.slide {
-			.slide-item {
-				.content {
-					padding: 20px 10px;
-
-					.logo {
-						height: 40px;
-					}
-
-					.text {
-
-						h4 {
-							font-size: 16px;
-							line-height: 18px;
-							margin-bottom: 10px;
-						}
-
-						p {
-							font-size: 10px;
-							margin-bottom: 10px;
-						}
-					}
 				}
 			}
 		}
@@ -1656,30 +1664,6 @@ section {
 		}
 	}
 
-	#our-customer {
-		.slide {
-			.slide-item {
-				.content {
-					.text {
-						p {
-							font-size: 10px;
-							line-height: 13px;
-							font-family: $font;
-						}
-					}
-				}
-
-				&:nth-child(4) {
-					.content {
-						.logo {
-							height: 51%;
-						}
-					}
-				}
-			}
-		}
-	}
-
 	#foot {
 		.wrap {
 			height: auto;
@@ -1717,27 +1701,6 @@ section {
 
 }
 
-@media only screen and (max-width: 550px) {
-	#our-customer {
-		.slide {
-			.slide-item {
-				.content {
-					padding: 50px 10px;
-
-					.logo {
-						margin-bottom: 20px;
-					}
-					.text {
-						p {
-							display: none;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 @media only screen and (max-width: 500px) {
 	#nav {
 		.logo {
@@ -1762,6 +1725,32 @@ section {
 					width: 100%;
 					padding: 0px 20px;
 				}
+			}
+		}
+	}
+
+	#our-customer {
+		.slide {
+			.slide-item {
+				.svg {
+					background: rgba(0,0,0,0.5);
+				}
+
+				.content {
+					h4 {
+						float: right;
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+
+	#contact {
+		.box-wrap {
+			.box {
+				padding-left: 0px;
+				padding-right: 0px;
 			}
 		}
 	}
@@ -1840,34 +1829,6 @@ section {
 					h1 {
 						font-size: 40px;
 						line-height: 50px;
-					}
-				}
-			}
-		}
-	}
-
-	#our-customer {
-		.slide {
-			.slide-item {
-				.content {
-					padding: 50px 10px;
-
-					.logo {
-						margin-bottom: 20px;
-					}
-					.text {
-						h4 {
-							font-size: 14px;
-						}
-					}
-				}
-
-				&:nth-child(4) {
-					.content {
-						.logo {
-							height: 62%;
-							background-size: 75%;
-						}
 					}
 				}
 			}
