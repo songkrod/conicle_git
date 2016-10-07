@@ -8,9 +8,9 @@ angular.module('core').directive('pageScroll', function() {
 				var tmpID = $(this).attr("href");
 
 				$('html, body').stop(true, false).animate({
-					scrollTop: ($(tmpID).offset().top - 70)
+					scrollTop: ($(tmpID).offset().top - 60)
 				}, 500);
-			})
+			});
 		}
 	};
 });
