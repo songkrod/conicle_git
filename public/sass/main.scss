@@ -401,7 +401,7 @@ section {
 			width: 100%;
 			padding-left: 90px;
 			position: relative;
-			background: url(../images/icon-test.png) left top no-repeat;
+			background: url(../images/icon-phone.png) left top no-repeat;
 			background-size: 60px;
 			@include box-sizing;
 
@@ -416,6 +416,16 @@ section {
 				font-weight: bold;
 				font-family: $font;
 				text-align: left;
+			}
+
+			&:nth-child(2) {
+				background-image: url(../images/icon-play.png);
+			}
+			&:nth-child(3) {
+				background-image: url(../images/icon-person.png);
+			}
+			&:nth-child(4) {
+				background-image: url(../images/icon-graph.png);
 			}
 		}
 	}
@@ -1090,6 +1100,20 @@ section {
 
 			h5 {
 				color: $black;
+			}
+
+			.contact-box {
+				widows: 100%;
+				padding-left: 80px;
+				position: relative;
+				@include box-sizing;
+
+				background: url(../images/icon-phone.png) left top no-repeat;
+				background-size: 60px;
+
+				&.con {
+					background-image: url(../images/icon-contact.png);
+				}
 			}
 
 			span {

@@ -22,6 +22,12 @@ angular.module('page').controller('ContactController', [
 				headers : {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}
 			}).success(function(data) {
 				console.log("OK", data);
+
+				$scope.form.name = "";
+				$scope.form.email = "";
+				$scope.form.company = "";
+				$scope.form.msg = "";
+
 				$("body").append(alert);
 				TweenMax.to($("#alert"), .3, {opacity: 1, onComplete: function () {
 					TweenMax.fromTo( $("#alert .box"), 0.3, { scale: 0.5, opacity: 0}, { scale: 1, opacity: 1, ease:Elastic.easeOut, onComplete:function() {

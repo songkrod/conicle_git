@@ -4,11 +4,9 @@ angular.module('core').directive('pageScroll', function() {
 		link: function(scope, element, attrs) {
 			// $(element).toolbar(scope.$eval(attrs.toolbarTip));
 
-			$(element).find("ul li a").click(function () {
-				var tmpID = $(this).attr("href");
-
+			$(element).click(function () {
 				$('html, body').stop(true, false).animate({
-					scrollTop: ($(tmpID).offset().top - 60)
+					scrollTop: ($(attrs.pageScroll).offset().top - 60)
 				}, 500);
 			});
 		}

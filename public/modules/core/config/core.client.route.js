@@ -7,6 +7,7 @@ angular.module('core').config([
 			enabled: true,
 			requireBase: false
 		});
-		// $urlRouterProvider.otherwise('/');
+		
+		$urlRouterProvider.otherwise('/');
 	}
 ])
