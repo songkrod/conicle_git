@@ -19,7 +19,7 @@
 	transition: all #{$time} #{$ease};
 }
 
-@mixin box-shadow($color: '#000000', $x: '0px', $y: '0px', $blur: '3px', $inset: '') {
+@mixin box-shadow($color: 'rgba(0, 0, 0, 0.3)', $x: '0px', $y: '0px', $blur: '3px', $inset: '') {
 	-webkit-box-shadow: #{$color} #{$x} #{$y} #{$blur} #{$inset};
 	-moz-box-shadow: #{$color} #{$x} #{$y} #{$blur} #{$inset};
 	box-shadow: #{$color} #{$x} #{$y} #{$blur} #{$inset};

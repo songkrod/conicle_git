@@ -14,6 +14,7 @@
 		<script type='text/javascript' src='public/modules/page/page.client.module.js'></script>
 		<!-- Directive -->
 		<script type='text/javascript' src='public/modules/core/directive/pageScroll.client.directive.js'></script>
+		<script type='text/javascript' src='public/modules/core/directive/modal.client.directive.js'></script>
 		<script type='text/javascript' src='public/modules/core/directive/sticky.client.directive.js'></script>
 		<script type='text/javascript' src='public/modules/core/directive/slide.client.directive.js'></script>
 		<script type='text/javascript' src='public/modules/core/directive/slideItem.client.directive.js'></script>
@@ -21,6 +22,7 @@
 		<script type='text/javascript' src='public/modules/core/config/core.client.route.js'></script>
 		<script type='text/javascript' src='public/modules/page/config/page.client.route.js'></script>
 		<!-- Controller -->
+		<script type='text/javascript' src='public/modules/page/controller/conicle.client.controller.js'></script>
 		<script type='text/javascript' src='public/modules/page/controller/index.client.controller.js'></script>
 		<script type='text/javascript' src='public/modules/page/controller/solution.client.controller.js'></script>
 		<script type='text/javascript' src='public/modules/page/controller/product.client.controller.js'></script>
@@ -29,7 +31,7 @@
 		<!-- Application -->
 		<script type='text/javascript' src='public/application.js'></script>
 	</head>
-	<body id="main">
+	<body id="main" data-ng-controller="ConicleController">
 		<div id="page-home" data-ui-view=""></div>
 		<div id="page-solution" data-ui-view="solution"></div>
 		<div id="page-products" data-ui-view="product"></div>
@@ -58,8 +60,42 @@
 					<li><a data-page-scroll="#page-products" href="#products">Products</a></li>
 					<li><a data-page-scroll="#page-customer" href="#our-customers">Our Customers</a></li>
 					<li><a data-page-scroll="#page-contact-us" href="#contact-us">Contact us</a></li>
-					<li><a class="button" href="">Donwload PDF</a></li>
+					<li><a class="button" data-ng-click="showModal('request-demo')">Donwload PDF</a></li>
 				</ul>
+			</div>
+		</div>
+		<div id="request-demo" class="modal" data-modal="">
+			<div class="overlay"></div>
+			<div class="scroll">
+				<div class="wrap">
+					<div class="box">
+						<h4>Request for Demo and Quotation</h4>
+						<form data-ng-submit="requestDemo()">
+							<input type="text" placeholder="Your name" data-ng-model="demo.name">
+							<input type="text" placeholder="Company name" data-ng-model="demo.company">
+							<input type="text" placeholder="Email" data-ng-model="demo.email">
+							<button class="red" type="submit" data-ng-click="Submit">Submit</button>
+						</form>
+					</div>
+					<div class="btn-close"></div>
+				</div>
+			</div>
+		</div>
+		<div id="request-pdf" class="modal" data-modal="">
+			<div class="overlay"></div>
+			<div class="scroll">
+				<div class="wrap">
+					<div class="box">
+						<h4>Request for download PDF</h4>
+						<form data-ng-submit="requestDemo()">
+							<input type="text" placeholder="Your name" data-ng-model="demo.name">
+							<input type="text" placeholder="Company name" data-ng-model="demo.company">
+							<input type="text" placeholder="Email" data-ng-model="demo.email">
+							<button class="red" type="submit" data-ng-click="Submit">Submit</button>
+						</form>
+					</div>
+					<div class="btn-close"></div>
+				</div>
 			</div>
 		</div>
 	</body>
