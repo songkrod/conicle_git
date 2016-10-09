@@ -10,7 +10,7 @@ angular.module('page').controller('ContactController', [
 				"attachments" : [
 					{
 						"title": "Contact Information",
-						"text": "Name : " + $scope.form.name + "\nCompany : " + $scope.form.company + "\nMessage : " + $scope.form.msg
+						"text": "Name : " + $scope.form.name + "\nCompany : " + $scope.form.company + "\nPhone : " + $scope.form.phone + "\nMessage : " + $scope.form.msg
 					}
 				]
 			};

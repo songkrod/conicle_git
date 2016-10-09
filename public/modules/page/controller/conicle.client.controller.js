@@ -10,7 +10,7 @@ angular.module('page').controller('ConicleController', [
 
 		function animateModal(modal) {
 			TweenMax.to(modal.find(".overlay"), .3, {opacity: 1, onComplete: function () {
-				TweenMax.fromTo( modal.find(".scroll"), 1, { scale: 0.5, opacity: 0}, { scale: 1, opacity: 1, ease:Elastic.easeOut, onComplete:function() {
+				TweenMax.fromTo( modal.find(".panel"), 1, { scale: 0.5, opacity: 0}, { scale: 1, opacity: 1, ease:Elastic.easeOut, onComplete:function() {
 				}});
 			}});
 		}
@@ -22,7 +22,7 @@ angular.module('page').controller('ConicleController', [
 				"attachments" : [
 					{
 						"title": "Contact Information",
-						"text": "Name : " + $scope.demo.name + "\nCompany : " + $scope.demo.company
+						"text": "Name : " + $scope.demo.name + "\nCompany : " + $scope.demo.company + "\nPhone : " + $scope.demo.phone
 					}
 				]
 			};
@@ -33,11 +33,11 @@ angular.module('page').controller('ConicleController', [
 		$scope.requestPDF = function() {
 			var d = {
 				"channel": "#request-pdf",
-				"text": "Contact From " + $scope.demo.email,
+				"text": "Contact From " + $scope.pdf.email,
 				"attachments" : [
 					{
 						"title": "Contact Information",
-						"text": "Name : " + $scope.demo.name + "\nCompany : " + $scope.demo.company
+						"text": "Name : " + $scope.pdf.name + "\nCompany : " + $scope.pdf.company + "\nPhone : " + $scope.pdf.phone
 					}
 				]
 			};
@@ -58,6 +58,12 @@ angular.module('page').controller('ConicleController', [
 				$scope.demo.name = "";
 				$scope.demo.email = "";
 				$scope.demo.company = "";
+				$scope.demo.phone = "";
+
+				$scope.pdf.name = "";
+				$scope.pdf.email = "";
+				$scope.pdf.company = "";
+				$scope.pdf.phone = "";
 
 				$("body").append(alert);
 				TweenMax.to($("#alert"), .3, {opacity: 1, onComplete: function () {

@@ -60,42 +60,71 @@
 					<li><a data-page-scroll="#page-products" href="#products">Products</a></li>
 					<li><a data-page-scroll="#page-customer" href="#our-customers">Our Customers</a></li>
 					<li><a data-page-scroll="#page-contact-us" href="#contact-us">Contact us</a></li>
-					<li><a class="button" data-ng-click="showModal('request-demo')">Donwload PDF</a></li>
+					<li><a class="button" data-ng-click="showModal('request-pdf')">Donwload PDF</a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="request-demo" class="modal" data-modal="">
 			<div class="overlay"></div>
-			<div class="scroll">
-				<div class="wrap">
-					<div class="box">
-						<h4>Request for Demo and Quotation</h4>
-						<form data-ng-submit="requestDemo()">
-							<input type="text" placeholder="Your name" data-ng-model="demo.name">
-							<input type="text" placeholder="Company name" data-ng-model="demo.company">
-							<input type="text" placeholder="Email" data-ng-model="demo.email">
-							<button class="red" type="submit" data-ng-click="Submit">Submit</button>
-						</form>
+			<div class="panel">
+				<div class="scroll">
+					<div class="wrap">
+						<div class="box">
+							<div class="title">
+								<h4>Request for Demo. Let's meet and</h4>
+								<p>We will send you the Executive Summary and contact you for arranging the demo and presentation.</p>
+							</div>
+							<div class="body">
+								<div class="image">
+									<img src="public/images/request-demo.png">
+								</div>
+								<div class="form">
+									<form data-ng-submit="requestDemo()">
+										<h5>Please fill your information here.</h5>
+										<input type="text" placeholder="Your name" data-ng-model="demo.name">
+										<input type="text" placeholder="Company name" data-ng-model="demo.company">
+										<input type="text" placeholder="Email" data-ng-model="demo.email">
+										<input type="text" placeholder="Mobile" data-ng-model="demo.phone">
+										<button class="red" type="submit" data-ng-click="Submit">Submit</button>
+									</form>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="btn-close"></div>
 				</div>
+				<div class="btn-close">Close [x]</div>
 			</div>
 		</div>
 		<div id="request-pdf" class="modal" data-modal="">
 			<div class="overlay"></div>
-			<div class="scroll">
-				<div class="wrap">
-					<div class="box">
-						<h4>Request for download PDF</h4>
-						<form data-ng-submit="requestDemo()">
-							<input type="text" placeholder="Your name" data-ng-model="demo.name">
-							<input type="text" placeholder="Company name" data-ng-model="demo.company">
-							<input type="text" placeholder="Email" data-ng-model="demo.email">
-							<button class="red" type="submit" data-ng-click="Submit">Submit</button>
-						</form>
+			<div class="panel">
+				<div class="scroll">
+					<div class="wrap">
+						<div class="box">
+							<div class="title">
+								<h4>GET FREE! Conicle's Executive Summary</h4>
+								<p>We will send you the Executive Summary of Conicle Smart Enterprise Platform via Email.</p>
+							</div>
+							<div class="body">
+								<div class="image">
+									<img src="public/images/request-pdf.png">
+									<span>GET FREE! Conicle's Executive Summary</span>
+								</div>
+								<div class="form">
+									<form data-ng-submit="requestPDF()">
+										<h5>Please fill your information here.</h5>
+										<input type="text" placeholder="Your name" data-ng-model="pdf.name">
+										<input type="text" placeholder="Company name" data-ng-model="pdf.company">
+										<input type="text" placeholder="Email" data-ng-model="pdf.email">
+										<input type="text" placeholder="Mobile" data-ng-model="pdf.phone">
+										<button class="red" type="submit" data-ng-click="Submit">Submit</button>
+									</form>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="btn-close"></div>
 				</div>
+				<div class="btn-close">Close [x]</div>
 			</div>
 		</div>
 	</body>
